@@ -1,0 +1,28 @@
+
+Survey Hawk
+=================
+
+What it is:
+-- A quiz app.
+
+
+User stories:
+------------------
+Poller/Quizer:
+1. Create an account.
+2. Pay to activate*
+3. Upload Quiz.
+4. See results / statistics.
+
+Responders:
+1. Receive link to quiz via email.
+3. Access quiz.
+4. Respond to questions.
+5. View results.
+
+Models:
+1. User - fname, sname, email, password, role(student, examiner) ** remove student account
+2. Quiz - id, title, examiner (must be user of role: examiner), deadline, duration
+3. questions - quiz_id, question, opt1, opt2, opt3, opt4, correct_opt
+4. registrations - id, quiz_id, student_id, timestamp
+5. student_submissions - student_id, quiz_id, question_id, student_answer, correct_answer, timestamp
